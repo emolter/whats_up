@@ -1,0 +1,25 @@
+### input file for whats_up.py ###
+# observation parameters
+targetlist                Io, Titan, Uranus, Neptune
+tstart                    2017-07-18 05:00   #YYYY-MM-DD HH:MM
+tend                      2017-07-18 14:00   #YYYY-MM-DD HH:MM
+stepsize                  10 minutes   #readable by JPL Horizons. if blank, stepsize = 30 minutes
+min_ang_sep               60, 60, 0, 0   #arcsec. single number for all targets or list of same length as targetlist.
+max_airmass               2.5   #single number for all targets or list of same length as targetlist. above this airmass, show target(s) as unobservable
+min_moon_dist             5.0   #degrees. single number for all targets or list of same length as targetlist. 5 degrees if blank
+make_starlist             True   #if True, makes a Keck-format starlist for target
+starlist_save_path        starlists/
+
+# observatory parameters
+observatory_code          568   #in JPL Horizons. Required.
+ingest_limits             True   #only look at limits_file and limits_pad if True
+limits_file               tel_limits/keck2_limits.txt #three column text file: az, alt_lower, alt_upper
+limits_pad                1.0   #degrees. how close to scope limits can a target be
+
+# standard star parameters
+include_standards         True   #if True, puts standard stars onto the starlist
+standards_file            standards/standards_bright.txt   #list of standard stars in Keck starlist format
+
+# code parameters
+show_plots                False
+plot_save_path            images/   #if left blank, will use current working dir. must have slash at end

@@ -1,0 +1,20 @@
+record divider  00 00 00.00 +00 00 00.0 2000.0 #####################
+HD201941        21 12 45.32 +02 38 33.8 2000.0 rotmode=pa rotdest=0 vmag=6.99 rmag=6.99 hmag=6.673 jmag=6.678 kmag=6.602 lmag=6.61 mmag=6.63 sptype=A2/3V
+HD203856        21 23 35.52 +40 01 07.0 2000.0 rotmode=pa rotdest=0 vmag=7.21 rmag=7.21 hmag=6.873 jmag=6.896 kmag=6.84 lmag=6.871 mmag=6.84 sptype=A0V
+HD162208        17 47 58.55 +39 58 50.9 2000.0 rotmode=pa rotdest=0 vmag=7.6 rmag=7.6 hmag=7.133 jmag=7.167 kmag=7.107 lmag=7.125 mmag=7.05 sptype=A0
+HD161903        17 48 19.22 -01 48 29.7 2000.0 rotmode=pa rotdest=0 vmag=7.74 rmag=7.74 hmag=7.102 jmag=7.151 kmag=7.028 lmag=7.034 mmag=6.97 sptype=A4IV/V
+HD129655        14 43 46.44 -02 30 19.9 2000.0 rotmode=pa rotdest=0 vmag=7.22 rmag=7.22 hmag=6.702 jmag=6.782 kmag=6.634 lmag=6.666 mmag=6.69 sptype=A2IV
+V*IXUMa         09 48 44.64 +43 39 55.6 2000.0 rotmode=pa rotdest=0 vmag=7.9 rmag=7.8 hmag=7.519 jmag=7.524 kmag=7.494 lmag=7.547 mmag=7.56 sptype=A2II
+HD105601        12 09 27.79 +38 37 54.6 2000.0 rotmode=pa rotdest=0 vmag=7.39 rmag=7.13 hmag=6.713 jmag=6.776 kmag=6.665 lmag=6.669 mmag=6.7 sptype=Am
+HD106965        12 17 57.54 +01 34 31.1 2000.0 rotmode=pa rotdest=0 vmag=7.54 rmag=7.54 hmag=7.338 jmag=7.318 kmag=7.294 lmag=7.311 mmag=7.32 sptype=A0/1V
+HD129653        14 42 39.56 +36 45 24.3 2000.0 rotmode=pa rotdest=0 vmag=7.27 rmag=7.27 hmag=6.946 jmag=6.93 kmag=6.905 lmag=6.92 mmag=6.99 sptype=A2
+HD136754        15 21 34.53 +24 20 36.1 2000.0 rotmode=pa rotdest=0 vmag=7.25 rmag=7.25 hmag=7.168 jmag=7.07 kmag=7.097 lmag=7.158 mmag=7.13 sptype=A0
+HD77281         09 01 38.00 -01 28 34.7 2000.0 rotmode=pa rotdest=0 vmag=7.35 rmag=7.35 hmag=7.029 jmag=7.037 kmag=7.017 lmag=7.041 mmag=7.02 sptype=A3IV
+HD225023        00 02 46.02 +35 48 55.6 2000.0 rotmode=pa rotdest=0 vmag=7.52 rmag=7.52 hmag=7.002 jmag=7.021 kmag=6.946 lmag=6.979 mmag=6.95 sptype=A0
+HD18881         03 03 31.94 +38 24 36.0 2000.0 rotmode=pa rotdest=0 vmag=7.14 rmag=7.14 hmag=7.136 jmag=7.081 kmag=7.136 lmag=7.16 mmag=7.17 sptype=A0
+HD22686         03 38 55.09 +02 45 48.5 2000.0 rotmode=pa rotdest=0 vmag=7.22 rmag=7.22 hmag=7.199 jmag=7.159 kmag=7.132 lmag=7.199 mmag=7.16 sptype=A0/1V
+HD44612         06 24 46.60 +43 32 54.5 2000.0 rotmode=pa rotdest=0 vmag=7.22 rmag=7.22 hmag=7.067 jmag=7.066 kmag=7.048 lmag=7.05 mmag=7.07 sptype=A0
+HD38921         05 47 22.19 -38 13 51.3 2000.0 rotmode=pa rotdest=0 vmag=7.3 rmag=7.3 hmag=7.597 jmag=7.52 kmag=7.506 lmag=7.513 mmag=7.49 sptype=A0V
+HD3029          00 33 39.53 +20 26 01.6 2000.0 rotmode=pa rotdest=0 vmag=7.84 rmag=7.84 hmag=7.096 jmag=7.222 kmag=7.07 lmag=7.082 mmag=7.04 sptype=A3
+HD40335         05 58 13.52 +01 51 23.0 2000.0 rotmode=pa rotdest=0 vmag=6.91 rmag=6.91 hmag=6.468 jmag=6.518 kmag=6.43 lmag=6.441 mmag=6.41 sptype=A1II
+HD1160          00 15 57.30 +04 15 04.0 2000.0 rotmode=pa rotdest=0 vmag=7.14 rmag=7.14 hmag=7.013 jmag=6.983 kmag=7.04 lmag=7.055 mmag=7.04 sptype=A0V
