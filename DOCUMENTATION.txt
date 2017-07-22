@@ -22,6 +22,15 @@ The original version of this code was written for the twilight_zone observing pr
 
 ***
 
+USAGE:
+whats_up.py: Type ./whats_up.py -h within whats_up directory for help with the main code. See inputs.txt for sample input file.
+
+plot_planet_system.py: Open code to change inputs at top of script manually. Should be self-explanatory. Driver for this bit of code will be written soon (hopefully).
+
+standards/make_standards_master.py: Use this code as an example ONLY, write your own code to make a standard star list based on the science you're trying to do.
+
+***
+
 FUNCTIONALITY:
 
 whats_up.py:
@@ -71,7 +80,7 @@ V) Determination of alt-az-pa from ra-dec for standard stars would be more accur
 VI) A simple driver for plot_planet_system.py would be nice, instead of defining the input parameters at the top of the source code.
 	- If this gets done, can think about ways to integrate it into the whats_up.py main code, e.g. optionally produce this one where applicable.
 
-
+***
 
 
 
