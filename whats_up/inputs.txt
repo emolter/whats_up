@@ -1,6 +1,6 @@
 ### input file for whats_up.py ###
 # observation parameters
-targetlist                501, Titan, Uranus, 65 Cybele #names or Horizons codes, not case sensitive but must be comma separated
+targetlist                501, Titan, Uranus, 65 Cybele #names or Horizons codes, must be comma separated
 tstart                    2017-07-20 00:00   #YYYY-MM-DD HH:MM
 tend                      2017-07-20 23:00   #YYYY-MM-DD HH:MM
 stepsize                  10 minutes   #readable by JPL Horizons. if blank, stepsize = 30 minutes
