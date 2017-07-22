@@ -1,0 +1,82 @@
+AUTHOR:
+Ned Molter
+UC Berkeley Dept. of Astronomy
+emolter@berkeley.edu
+written as part of the Visiting Scholars program at Keck Observatory
+
+***
+
+LICENSING, OR WHATEVER:
+*Anyone is welcome to download and modify the code for personal use.
+*If you stage a version of this code in a public place, you must credit me as the original author.
+*If you use figures or data from a version of this code directly in a publication, you must cite this code according to the journal's rules. AAS publications now support citations of code.
+*If you use a version of this code to plan observations that end up in a publication, no need to cite anything, but I'd love to hear from you.
+*If you modify this code in a way that you feel would be useful to others, please do submit a pull request and/or get in touch with me. See OPEN PROJECTS section for things I'd like done with the code
+
+***
+
+PURPOSE:
+To simplify observation planning for solar system targets.
+Can be used for planets, major and minor moons, asteroids. Comets are difficult-- see limitations section.
+The original version of this code was written for the twilight_zone observing program at Keck Observatory (PI de Pater) and underlies their Web tool (link to Web page here; should launch soon)
+
+***
+
+FUNCTIONALITY:
+
+whats_up.py:
+
+I) queries JPL Horizons for a given list of solar system bodies and determines at what times they can be observed, taking into account:
+	1) moon avoidance, with user-defined minimum moon distance
+	2) occultations/transits of satellites (where applicable)
+	3) user-defined airmass limit
+	4) user-defined minimum angular separation between parent and satellite (where applicable)
+	5) telescope limits: 2-D (az-alt) high- and low-elevation limits defined by user (Keck 1 and 2 limits are pre-loaded)
+		5a) user-defined pad, in degrees, to keep target far from telescope limits
+II) generates plots to visualize observation, including
+	1) simple chart showing which of the input targets are observable at what times
+	2) altitude and azimuth of targets in sky over duration of observation, with telescope limits overlaid
+III) optionally creates Keck-format starlist(s) for the target(s)
+	1) optionally finds nearby standard stars for each target from a user-defined list (input in Keck format)
+
+*
+	
+plot_planet_system.py:
+
+Produces a pretty plot of the location of bodies in a planetary system for an arbitrary time and date.
+
+note: Currently need to modify input parameters at the top of the source code. Hopefully I will write a simple driver soon.
+
+*
+
+standards/make_standards_master.py
+
+Sample code snippet that queries SIMBAD using the Astropy-affiliated Astroquery package to create standard star list ingested by whats_up.py.
+I) Finds magnitudes for standard stars
+II) Outputs standards in Keck starlist format
+
+note: This is an example. You are very strongly encouraged to write your own code to generate your own standard list to feed into whats_up based on your science goals.
+
+***
+
+LIMITATIONS:
+see open projects
+
+***
+
+OPEN PROJECTS:
+
+I) Input arbitrary lat-lon-alt coordinates for observatory, instead of using only pre-defined JPL Horizons observatory codes.  Helpful for universities and amateur astronomers.
+II) Comets are difficult because Horizons generates many target strings for each comet. Your comet *may* work if you look it up with the Horizons web tool, choose the one you want, and copy that exact string. Ideally, the code would recognize that multiple targets match your query, and ask you inline to choose which one you want. Hopefully this will be updated in the future.
+III) Add limits files for other telescopes
+	- The way limits are handled may need to be further abstracted for special cases, e.g. JWST
+IV) Generate starlists in formats readable by telescopes other than Keck
+V) Determination of alt-az-pa from ra-dec for standard stars would be more accurate if done with pre-existing Astropy packages instead of with the by-hand approximations currently used.
+	- Currently ok to within about an arcminute, and most telescopes can convert ra-dec to alt-az by themselves anyway
+VI) A simple driver for plot_planet_system.py would be nice, instead of defining the input parameters at the top of the source code.
+	- If this gets done, can think about ways to integrate it into the whats_up.py main code, e.g. optionally produce this one where applicable.
+
+
+
+
+

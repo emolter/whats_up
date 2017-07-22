@@ -77,7 +77,7 @@ def main(argv):
     
     try:
         targetlist = args['targetlist']
-        targetlist = [s.strip(', \n') for s in targetlist.split()]
+        targetlist = [s.strip(', \n') for s in targetlist.split(',')]
         if len(targetlist) == 0:
             raise
     except:

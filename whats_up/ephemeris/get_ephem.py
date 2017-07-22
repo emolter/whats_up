@@ -41,19 +41,20 @@ def naif_lookup(target):
         try:
             code
         except:
-            sys.exit('ERROR: NAIF code not in lookup table.')
+            print('WARN: NAIF code not in lookup table. If code fails, ensure target can be queried in Horizons.')
+            code = target
                             
     if len(code) == 7: #minor body
         if code[0] == '2': #asteroid
             return code[1:]+';'
         elif code[0] =='1': #comet
-            sys.exit('ERROR: Comets are not handled at this time; you will need to hack to bypass naif_lookup and put code string straight into get_ephemerides')
+            sys.exit('ERROR: Comets cannot be looked up by NAIF ID; Horizons generates multiple codes for every comet. Try your search in the Horizons Web tool, select the target body you want, and then copy the exact string into this code and it *may* work.')
         return code
     return code
 
 def get_ephemerides(code, obs_code, tstart, tend, stepsize) :
     """
-    input NAIF target code as string, e.g. '501' for Io, and date in the format:
+    input NAIF target code, e.g. 501 for Io, and date in the format:
     'YYYY-MM-DD HH:MM'
     For example: data=get_ephem.get_ephemerides('501','2017-06-09 08:24')
     Returns a list containing (in string format):

@@ -1,8 +1,8 @@
 ### input file for whats_up.py ###
 # observation parameters
-targetlist                Io, Titan, Uranus, Neptune  #names or Horizons codes, not case sensitive
-tstart                    2017-07-18 05:00   #YYYY-MM-DD HH:MM
-tend                      2017-07-18 14:00   #YYYY-MM-DD HH:MM
+targetlist                501, Titan, Uranus, 65 Cybele #names or Horizons codes, not case sensitive but must be comma separated
+tstart                    2017-07-20 00:00   #YYYY-MM-DD HH:MM
+tend                      2017-07-20 23:00   #YYYY-MM-DD HH:MM
 stepsize                  10 minutes   #readable by JPL Horizons. if blank, stepsize = 30 minutes
 min_ang_sep               60, 60, 0, 0   #arcsec. single number for all targets or list of same length as targetlist.
 max_airmass               2.5   #single number for all targets or list of same length as targetlist. above this airmass, show target(s) as unobservable
@@ -21,5 +21,5 @@ include_standards         True   #if True, puts standard stars onto the starlist
 standards_file            standards/standards_bright.txt   #list of standard stars in Keck starlist format
 
 # code parameters
-show_plots                False
+show_plots                True
 plot_save_path            images/   #if left blank, will use current working dir. must have slash at end
