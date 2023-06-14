@@ -88,8 +88,8 @@ def get_ephemerides(code, obs_code, tstart, tend, stepsize) :
             #get observatory lat, lon, alt for later
             if ephem[i].startswith('Center geodetic :'):
                 l = ephem[i].split(':')[1]
-                latlonalt = l.split()[0]
-                [lon,lat,alt] = [float(s.strip(', \n')) for s in latlonalt.split(',')]
+                latlonalt = l.split()[:-1]
+                [lon,lat,alt] = [float(s.strip(', \n')) for s in latlonalt]
                 observatory_coords = [lat,lon,alt]
             if ephem[i].startswith('$$SOE') :
                 inephem=True
